@@ -1,1 +1,1 @@
-# Notas using vuejs
+# Notas 2.0 using vuejs
