@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/css/base.css"></link>
+  <script src="/js/vue.js"></script>
+  <script src="/js/aux.js"></script>
+  <script src="/js/load_siscop.js"></script>
+</head>
+<body>
+  <div id="msg">
+    <span id="errorMessage"></span>
+    <span id="infoMessage"></span>
+    <span id="successMessage"></span>
+    <span id="debugMessage"></span>
+  </div>
+  <form id="loginForm" method='post' action="/login">
+    <span class='info'>Informe sua Matr&iacute;cula, CPF e sua senha para logar na ALM e no SISCOP. </span>
+    <div id="m">
+      <label for='mat'>Matr&iacute;cula</label>
+      <input id='mat' type='text' name='mat' tabindex="2"></input>
+    </div>
+    <div id="d">
+      <label for='month'>M&ecirc;s</label>
+      <input id="month" name="month" type="month" required tabindex="4">
+    </div>
+    <div id="e">
+      <label for='cpf'>CPF</label>
+      <input id='cpf' type='text' name='cpf' tabindex="1"></input>
+      <label for='pass' class="plabel">Password</label>
+      <label for='pass' class="secret">Password Siscop</label>
+      <input type='password' name='pass' id='pass' tabindex="3"></input>
+      <label for='pass_alm'  class="secret">Password Alm</label>
+      <input type='password' class="secret" name='pass_alm' id='pass_alm' tabindex="4"></input>
+    </div>
+    <div id="c">
+      <div id="siscop"><img id="captcha" :src='captcha'><input type="hidden" name="viewstate" id="viewstate" :value="vs" /></div>
+      <label for='captcha'>Captcha</label>
+      <input type="text" name="captcha" tabindex="5" autocomplete="off" value="" />
+      <input type='button' id='loginButton' tabindex="6" value="Enviar"></input>
+    </div>
+    <div id='eq'>
+      <input name='pass_equal' value='1' id='equal' type='radio' checked='checked'/>
+      <label for='equal'>A senha &eacute; a mesma nos dois sistemas.</label>
+    </div>
+    <div id='dif'>
+      <input name='pass_equal' value='0' id='different' type='radio'/>
+      <label for='different'>As senhas s&atilde;o diferentes.</label>
+    </div>
+    <div id='sub'>
+      <input name='employees' id='employees' value='1' type='checkbox'/>
+      <label for='employees'>Incluir subordinados se houver (lento)</label>
+    </div>
+  </form>
+  <script src="/js/start.js"></script>
+</body>
+</html>

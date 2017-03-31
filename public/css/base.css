@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'inconsolata';
+  src: url('../font/InconsolataN-Regular.otf');
+}
+body{
+  margin-left: 2vw;
+  margin-top: 2vw;
+  font-family: inconsolata;
+  color: #000;
+  background: #FFF;
+}
+#msg, #loginForm{
+  font-size: 2.5vh;
+}
+#errorMessage{
+  color:red;
+  border:solid 0.3vh red;
+  display: inline-block;
+  border-radius: 0.8vh;
+  padding: 0.4vh;
+}
+#loginForm input{
+    color: #000;
+    border-color: #999;
+    background-color: #fff;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 0.8vh;
+    font-size:2.5vh;
+    font-family: inconsolata;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=month]:focus{
+  box-shadow: 0px 0px 0.1vh 0.1vw #72bbfa;
+  outline-style: none;
+}
+#loginForm input[type=button]{
+  background-color:#428bca;
+  color:#FFF;
+  border-color: #999;
+  border-radius: 0.8vh;
+  padding: 1vh 2vh 1vh 2vh;
+}
+label, img{
+  display: block;
+  margin-top: 2vh;
+}
+#captcha{
+  height: 9vh;
+}
+#sub label, #eq label, #dif label{
+  display: inline;
+}
+#loginButton{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: block;
+}
+.secret{
+  display:none;
+}
