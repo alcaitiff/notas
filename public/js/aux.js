@@ -104,11 +104,12 @@ window.aux = {
       if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
         var jsonResponse = JSON.parse(xhr.responseText);
         if (jsonResponse.error === "FAIL") {
-          document.getElementById('errorMessage').textContent =
-            jsonResponse.msg;
+          window.messages.showError(jsonResponse.msg);
+          document.getElementById('captchaText').value = '';
           window.siscop.load();
         } else {
-          console.log('Sucesso');
+          document.getElementById('loginForm').classList.add('fadeOut');
+          window.messages.hide();
         }
       }
     };

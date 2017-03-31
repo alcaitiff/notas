@@ -8,6 +8,7 @@ var runner = {
     document.getElementsByName('pass_equal').forEach((e) => {
       e.onchange = window.aux.changePasswordInputs;
     });
+    window.messages.start();
     siscop.load();
     Vue.nextTick();
   },

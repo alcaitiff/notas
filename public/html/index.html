@@ -5,13 +5,14 @@
   <script src="/js/vue.js"></script>
   <script src="/js/aux.js"></script>
   <script src="/js/load_siscop.js"></script>
+  <script src="/js/messages.js"></script>
 </head>
 <body>
   <div id="msg">
-    <span id="errorMessage"></span>
-    <span id="infoMessage"></span>
-    <span id="successMessage"></span>
-    <span id="debugMessage"></span>
+    <span id="errorMessage" class="message hide"></span>
+    <span id="infoMessage" class="message hide"></span>
+    <span id="successMessage" class="message hide"></span>
+    <span id="debugMessage" class="message hide"></span>
   </div>
   <form id="loginForm" method='post' action="/login">
     <span class='info'>Informe sua Matr&iacute;cula, CPF e sua senha para logar na ALM e no SISCOP. </span>
@@ -35,7 +36,7 @@
     <div id="c">
       <div id="siscop"><img id="captcha" :src='captcha'><input type="hidden" name="viewstate" id="viewstate" :value="vs" /></div>
       <label for='captcha'>Captcha</label>
-      <input type="text" name="captcha" tabindex="5" autocomplete="off" value="" />
+      <input type="text" id="captchaText" name="captcha" tabindex="5" autocomplete="off" value="" />
       <input type='button' id='loginButton' tabindex="6" value="Enviar"></input>
     </div>
     <div id='eq'>

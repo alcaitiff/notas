@@ -15,7 +15,6 @@ body{
 #errorMessage{
   color:red;
   border:solid 0.3vh red;
-  display: inline-block;
   border-radius: 0.8vh;
   padding: 0.4vh;
 }
@@ -57,4 +56,15 @@ label, img{
 }
 .secret{
   display:none;
+}
+.hide{
+  opacity: 0;
+}
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.3s;
 }
