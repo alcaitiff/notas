@@ -6,6 +6,7 @@ window.siscop = {
   captcha: null,
   vs: null,
   vm: null,
+  captchaTextValue: null,
   updateData: function(callback, v) {
     this.vs = window.aux.between(v, this.vsStr, "'");
     this.captcha = window.aux.between(v, this.captchaStr, "'");
@@ -23,6 +24,7 @@ window.siscop = {
     } else {
       this.vm.vs = this.vs;
       this.vm.captcha = this.captcha;
+      this.vm.captchaTextValue = this.captchaTextValue;
     }
   },
   component: function() {
@@ -30,7 +32,8 @@ window.siscop = {
       el: '#siscop',
       data: {
         vs: this.vs,
-        captcha: this.captcha
+        captcha: this.captcha,
+        captchaTextValue: this.captchaTextValue
       }
     });
   }

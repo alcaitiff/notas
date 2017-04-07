@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="/css/base.css"></link>
+  <script src="/js/master.js"></script>
   <script src="/js/vue.js"></script>
   <script src="/js/aux.js"></script>
   <script src="/js/load_siscop.js"></script>
@@ -34,10 +35,13 @@
       <input type='password' class="secret" name='pass_alm' id='pass_alm' tabindex="4"></input>
     </div>
     <div id="c">
-      <div id="siscop"><img id="captcha" :src='captcha'><input type="hidden" name="viewstate" id="viewstate" :value="vs" /></div>
-      <label for='captcha'>Captcha</label>
-      <input type="text" id="captchaText" name="captcha" tabindex="5" autocomplete="off" value="" />
-      <input type='button' id='loginButton' tabindex="6" value="Enviar"></input>
+      <div id="siscop">
+        <img id="captcha" :src='captcha' />
+        <input type="hidden" name="viewstate" id="viewstate" :value="vs" />
+        <label for='captcha'>Captcha</label>
+        <input type="text" id="captchaText" name="captcha" tabindex="5" autocomplete="off" :value="captchaTextValue" />
+      </div>
+        <input type='button' id='loginButton' tabindex="6" value="Enviar"></input>
     </div>
     <div id='eq'>
       <input name='pass_equal' value='1' id='equal' type='radio' checked='checked'/>
